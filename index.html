@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovely L. Cornea | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffe4e6; /* Light Pink Background */
+            color: #4a1d1f;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- Header Navigation --- */
+        header {
+            width: 100%;
+            background: #ffffff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(251, 113, 133, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: bold;
+            color: black;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+        }
+
+        nav button {
+            background: transparent;
+            border: 2px solid #fb7185;
+            color: black;
+            padding: 6px 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav button:hover {
+            background: #fb7185;
+            color: white;
+            box-shadow: 0 4px 10px rgba(251, 113, 133, 0.3);
+        }
+
+        /* --- Profile & Personal Info Section --- */
+        .hero {
+            text-align: center;
+            margin-top: 40px;
+            animation: fadeIn 1s ease-in;
+            background: white;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffe4e6;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .personal-info {
+            background: #fff1f2;
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 15px;
+            border: 1px dashed #fb7185;
+        }
+
+        .personal-info p {
+            font-size: 0.95rem;
+            margin: 5px 0;
+            color: black;
+        }
+
+        .personal-info strong {
+            color: rgb(216, 49, 77);
+        }
+
+        /* --- Content Sections --- */
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .section-content {
+            display: none; /* Hidden until clicked */
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            margin-top: 20px;
+            border-top: 5px solid #fb7185;
+        }
+
+        /* --- Animations --- */
+        .pop-in {
+            display: block;
+            animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes popIn {
+            0% { opacity: 0; transform: translateY(20px) scale(0.9); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"> My Portfolio</div>
+        <nav>
+            <ul>
+                <li><button onclick="showSection('objective')">Objective</button></li>
+                <li><button onclick="showSection('skills')">Skills</button></li>
+                <li><button onclick="showSection('projects')">Projects</button></li>
+                <li><button onclick="showSection('contact')">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <img src="Gwapa.png" alt="Profile Photo" class="profile-img">
+        <h1 style="color: black;">Lovely L. Cornea</h1>
+        
+        <div class="personal-info">
+            <p><strong>Course:</strong> Bachelor of Science in Information Technology</p>
+            <p><strong>Year Level:</strong> 3rd Year College</p>
+            <p><strong>Age:</strong> 21</p>
+        </div>
+        
+        <p style="font-size: 0.8rem; color: #fda4af; margin-top: 15px; font-style: italic;">
+            Explore More
+        </p>
+    </div>
+
+    <div class="container">
+        <div id="objective" class="section-content">
+            <h2 style="color: #fb7185;">Career Objective</h2>
+            <hr style="border: 0; border-top: 1px solid #ffe4e6; margin: 10px 0;">
+            <p>To secure a role in a creative company where I can apply my skills and contribute to the growth of the organization while improving my professional capabilities.</p>
+        </div>
+
+        <div id="skills" class="section-content">
+            <h2 style="color: #fb7185;">Skills</h2>
+            <hr style="border: 0; border-top: 1px solid #ffe4e6; margin: 10px 0;">
+            <p>• CSS</p>
+            <p>• PYTHON</p>
+            <p>• HTML</p>
+        </div>
+
+        <div id="projects" class="section-content">
+            <h2 style="color: #fb7185;">Projects</h2>
+            <hr style="border: 0; border-top: 1px solid #ffe4e6; margin: 10px 0;">
+            <p><strong>Salon Booking System</strong> 
+            <p><strong>Transforming the food production index into actionable data analytics</strong> 
+        </div>
+
+        <div id="contact" class="section-content">
+            <h2 style="color: #fb7185;">Contact Info</h2>
+            <hr style="border: 0; border-top: 1px solid #ffe4e6; margin: 10px 0;">
+            <p>📧 Email: lovelycornea695@gmail.com</p>
+            <p>📞 Mobile:  09707755268</p>
+            <p>📍 Poblacion, Madridejos, Cebu, Philippines</p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(id) {
+            // Hide any currently active sections
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach(sec => {
+                sec.classList.remove('pop-in');
+            });
+
+            // Show the target section
+            const target = document.getElementById(id);
+            target.classList.add('pop-in');
+            
+            // Scroll smoothly to the revealed content
+            setTimeout(() => {
+                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+    </script>
+
+</body>
+</html>
